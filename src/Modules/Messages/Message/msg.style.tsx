@@ -110,6 +110,18 @@ export const StyledMessageStatus = styled.div<{ color?: string }>`
 
 export const StyledMessageWrapper = styled.article`
   padding: 24px 24px 24px 56px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 7.5%;
+    right: 7.5%;
+    height: 1px;
+    width: 85%;
+    background: rgba(136, 136, 136, 0.2);
+  }
 
   &.unread {
     ${StyledMessageCmpnyName} {

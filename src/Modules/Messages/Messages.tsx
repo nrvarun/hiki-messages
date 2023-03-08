@@ -104,7 +104,7 @@ const Messages = (props: Props) => {
   const [activeNavTab, setActiveNavTab] = useState("all-msgs");
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={1}>
       <Grid item xs={12}>
         <StyledMessagesWrapper>
           <Grid container columnSpacing={2} alignItems="center">
