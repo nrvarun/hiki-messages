@@ -14,8 +14,9 @@ import {
 } from "react-router-dom";
 
 import Dashboard from "Modules/Dashboard";
-import MyFirm from "Modules/MyFirm";
 import AppLayout from "Layout/AppLayout";
+import Messages from "Modules/Messages";
+import MessageDetails from "Modules/MessageDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,7 +30,9 @@ const router = createBrowserRouter(
       }
     >
       <Route index element={<Dashboard />} />
-      <Route path="firm" element={<MyFirm />} />
+      <Route path="messages" element={<Messages />}>
+        <Route path=":msgId" element={<MessageDetails />} />
+      </Route>
     </Route>
   )
 );

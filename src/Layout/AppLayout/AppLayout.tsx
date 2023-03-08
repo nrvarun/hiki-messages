@@ -43,6 +43,13 @@ const PRIMARY_NAV = [
     route: "/clients",
   },
   {
+    id: 3,
+    label: "Colleagues",
+    icon: "/images/icons/nav/colleagues.svg",
+    counter: 0,
+    route: "/colleagues",
+  },
+  {
     id: 4,
     label: "Messages",
     route: "/messages",
@@ -109,7 +116,7 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
         </StyledAppDrawerHeader>
         <StyledAppDrawerBody>
           <StyledAppNavList>
-            {PRIMARY_NAV.slice(0, 3).map((nav, index) => (
+            {PRIMARY_NAV.slice(0, 4).map((nav, index) => (
               <li key={nav.id}>
                 <NavLink to={nav.route}>
                   <NavItem
@@ -123,7 +130,7 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
           </StyledAppNavList>
           <Divider />
           <StyledAppNavList>
-            {PRIMARY_NAV.slice(3, 9).map((nav, index) => (
+            {PRIMARY_NAV.slice(4, 10).map((nav, index) => (
               <li key={nav.id}>
                 <NavLink to={nav.route}>
                   <NavItem
@@ -137,7 +144,7 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
           </StyledAppNavList>
           <Divider />
           <StyledAppNavList>
-            {PRIMARY_NAV.slice(9).map((nav, index) => (
+            {PRIMARY_NAV.slice(10).map((nav, index) => (
               <li key={nav.id}>
                 <NavLink to={nav.route}>
                   <NavItem
