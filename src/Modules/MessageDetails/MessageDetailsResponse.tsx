@@ -1,10 +1,21 @@
 import {
   AttachFile,
+  CheckBoxRounded,
+  CheckCircleOutline,
   CloseOutlined,
   FileUploadTwoTone,
   SendOutlined,
 } from "@mui/icons-material";
-import { Avatar, Button, Grid, IconButton, TextField } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+  Grid,
+  IconButton,
+  TextField,
+} from "@mui/material";
 import { StyledMessageCmpnyName } from "Modules/Messages/Message/msg.style";
 
 import SVG from "react-inlinesvg";
@@ -61,7 +72,7 @@ const MessageDetailsResponse = (props: Props) => {
             </Button>
           </StyledMessageDetailsReplyWrapper>
         </Grid>
-        <Grid item xs={12} marginBottom={4}>
+        <Grid item xs={12} marginBottom={1}>
           <Button
             variant="text"
             component="label"
@@ -93,6 +104,16 @@ const MessageDetailsResponse = (props: Props) => {
               </StyledMessageAttachment>
             </li>
           </StyledMessageAttachmentList>
+        </Grid>
+        <Grid item xs={12}>
+          <FormGroup>
+            <FormControlLabel
+              control={
+                <Checkbox checkedIcon={<CheckCircleOutline />} defaultChecked />
+              }
+              label="Upload Files in Documents"
+            />
+          </FormGroup>
         </Grid>
       </Grid>
     </StyledMessageDetailsResponseWrapper>
