@@ -45,7 +45,7 @@ export const StyledAppNavItem = styled(Button)<{ isActive?: boolean }>`
     left: -32px;
     top: 0;
     bottom: 0;
-    display: ${({ isActive }) => (isActive ? "block" : "none")};
+    display: none;
   }
 
   svg {
@@ -92,7 +92,7 @@ export const StyledAppNavList = styled.ul`
           background: #f2f9ff;
 
           &:before {
-            display: "block";
+            display: block;
           }
 
           svg {

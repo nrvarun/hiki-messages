@@ -5,6 +5,8 @@ export const StyledMessageAvatar = styled.img`
   height: 40px;
   border-radius: 50%;
   margin: 0 12px 0 0;
+  background: #fff;
+  padding: 2px;
 `;
 
 export const StyledMessageCmpnyWrapper = styled.div`
@@ -97,6 +99,7 @@ export const StyledMessageStatus = styled.div<{ color?: string }>`
   display: inline-block;
   margin: 0;
   padding: 4px;
+  text-transform: Capitalize;
 
   ${StyledMessageTag} {
     padding: 2px 8px;
